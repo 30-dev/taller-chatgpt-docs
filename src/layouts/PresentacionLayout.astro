@@ -1,0 +1,29 @@
+---
+// Layout para páginas Markdown que permite usar componentes Astro
+import Sidebar from "../componentes/Sidebar.jsx";
+import ModalPresentacionWrapper from "../componentes/ModalPresentacionWrapper.jsx";
+import "../styles/global.css";
+const { title } = Astro.props;
+const pasos = [
+  { titulo: "Bienvenida", contenido: "<b>¡Hola!</b> Este es el inicio del taller." },
+  { titulo: "Objetivo", contenido: "Aprenderás a usar ChatGPT de forma efectiva." },
+  { titulo: "¡Comencemos!", contenido: "Haz clic en siguiente para empezar." }
+];
+---
+
+<html lang="es">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="flex min-h-screen text-gray-900 bg-white font-sans">
+    <Sidebar client:load />
+    <main class="flex-1 p-6 md:px-16 prose max-w-none bg-white min-h-screen">
+      <ModalPresentacionWrapper client:load pasos={pasos} />
+      <div class="max-w-3xl mx-auto px-4 md:px-0 mt-12">
+        <slot />
+      </div>
+    </main>
+  </body>
+</html>

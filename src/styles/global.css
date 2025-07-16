@@ -1,1 +1,39 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-cirka: 'DM Serif Display', serif;
+  --_1bnhknb2: #000000;
+  --_1bnhknb3: #ffffff;
+  --_1bnhknb4: #eff6ff;
+  --_1bnhknb5: #dbeafe;
+  --_1bnhknb6: #bfdbfe;
+  --_1bnhknb7: #374151;
+  --_1bnhknb8: #1f2937;
+  --_1bnhknb9: #111827;
+  --_1bnhknba: #ff32f5;
+  --_1bnhknbb: #f3fc47;
+  --_1bnhknbc: #f21d28;
+  --_1bnhknbd: #d711ed;
+  --_1bnhknbe: #62fa3c;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
+.font-inter {
+  font-family: var(--font-inter);
+}
+.font-cirka {
+  font-family: var(--font-cirka);
+}
+
+.titulo-color {
+  color: var(--_1bnhknba);
+}

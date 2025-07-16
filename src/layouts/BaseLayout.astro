@@ -1,8 +1,8 @@
 ---
+import ModoPresentacion from "../componentes/ModoPresentacion.jsx";
 import "../styles/global.css";
-const { children } = Astro.props;
+import { useState } from "react";
 ---
-
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@ const { children } = Astro.props;
       <h1 class="text-lg font-semibold mb-6">🧠 Taller ChatGPT</h1>
       <nav class="space-y-2 text-sm">
         <a href="/" class="block hover:text-blue-600">Introducción</a>
-        <a href="/prompting" class="block hover:text-blue-600">Fundamentos del Prompting</a>
+        <a href="/presentacion" class="block hover:text-blue-600">Presentación</a>
         <a href="/tecnicas" class="block hover:text-blue-600">Técnicas Avanzadas</a>
         <a href="/casos-reales" class="block hover:text-blue-600">Casos Reales</a>
         <a href="/organizacion" class="block hover:text-blue-600">Organización</a>
@@ -23,12 +23,15 @@ const { children } = Astro.props;
         <a href="/funciones" class="block hover:text-blue-600">Funciones y Límites</a>
         <a href="/generacion" class="block hover:text-blue-600">Generación de Conceptos</a>
         <a href="/recursos" class="block hover:text-blue-600">Recursos</a>
+        <a href="/practica" class="block hover:text-blue-600">Práctica IA</a>
       </nav>
     </aside>
-
     <!-- Content -->
-    <main class="flex-1 p-6 md:p-12 prose max-w-none">
+    <main class="flex-1 p-6 md:p-12 prose max-w-none relative">
       <slot />
+      <ModoPresentacion client:load>
+        <slot />
+      </ModoPresentacion>
     </main>
   </body>
 </html>

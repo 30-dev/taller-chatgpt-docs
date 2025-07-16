@@ -1,0 +1,78 @@
+---
+import PracticaPrompt from "../componentes/PracticaPrompt.jsx";
+import EjercicioPrompt from "../componentes/EjercicioPrompt.jsx";
+import Sidebar from "../componentes/Sidebar.jsx";
+import "../styles/global.css";
+---
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica IA | Taller ChatGPT</title>
+    <meta name="description" content="Pon a prueba tus prompts y experimenta con la IA en tiempo real." />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body class="flex min-h-screen text-gray-900 bg-white font-sans">
+    <Sidebar client:load />
+    <main class="flex-1 flex flex-col items-center justify-center p-6 md:p-16">
+      <div class="w-full max-w-5xl bg-white overflow-hidden">
+        <div class="px-8 py-10 md:py-14 bg-white">
+          <h1 class="text-5xl md:text-6xl font-space font-bold mb-10 mt-0 uppercase tracking-tight bg-gradient-to-r from-cyan-700 via-fuchsia-600 to-yellow-400 bg-clip-text text-transparent">Ejercicios prácticos</h1>
+          <h2 class="text-2xl font-space text-black mb-8 mt-2 uppercase tracking-tight">Pon en práctica lo aprendido</h2>
+          <ul class="text-lg text-gray-900 mb-12 text-left max-w-xl ml-4 md:ml-8">
+            <li class="mb-10">
+              <h3 class="text-xl font-space font-bold mb-2 text-gray-900">Anatomía completa de un buen prompt</h3>
+              <p class="text-base text-gray-600 mb-4">Redacta un prompt para pedirle a ChatGPT que explique la estructura de un prompt efectivo. <span class="font-semibold text-fuchsia-700">Tu prompt debe incluir todos los elementos de la anatomía de un buen prompt:</span> una instrucción clara, el output esperado, el objetivo, el contexto y las restricciones.</p>
+              <div class="bg-gray-50 outline outline-1 outline-gray-200 p-8 mb-2">
+                <EjercicioPrompt client:load 
+                  ejercicio="Redacta un prompt para pedirle a ChatGPT que explique la estructura de un prompt efectivo."
+                  instrucciones="Incluye en tu prompt: instrucción clara, output esperado, objetivo, contexto y restricciones."
+                />
+              </div>
+            </li>
+            <li class="mb-10">
+              <h3 class="text-xl font-space font-bold mb-2 text-gray-900">Comparación de campañas de redes sociales</h3>
+              <p class="text-base text-gray-600 mb-4">Redacta un prompt para pedirle a ChatGPT que compare dos campañas de redes sociales. <span class="font-semibold text-fuchsia-700">Tu prompt debe incluir todos los elementos de la anatomía de un buen prompt:</span> una instrucción clara, el output esperado, el objetivo, el contexto y las restricciones.</p>
+              <div class="bg-gray-50 outline outline-1 outline-gray-200 p-8 mb-2">
+                <EjercicioPrompt client:load 
+                  ejercicio="Redacta un prompt para pedirle a ChatGPT que compare dos campañas de redes sociales."
+                  instrucciones="Incluye en tu prompt: instrucción clara, output esperado, objetivo, contexto y restricciones."
+                />
+              </div>
+            </li>
+            <li class="mb-10">
+              <h3 class="text-xl font-space font-bold mb-2 text-gray-900">Sugerencias para mejorar el tono de voz de una marca</h3>
+              <p class="text-base text-gray-600 mb-4">Redacta un prompt para pedirle a ChatGPT que sugiera mejoras para el tono de voz de una marca. <span class="font-semibold text-fuchsia-700">Tu prompt debe incluir todos los elementos de la anatomía de un buen prompt:</span> una instrucción clara, el output esperado, el objetivo, el contexto y las restricciones.</p>
+              <div class="bg-gray-50 outline outline-1 outline-gray-200 p-8 mb-2">
+                <EjercicioPrompt client:load 
+                  ejercicio="Redacta un prompt para pedirle a ChatGPT que sugiera mejoras para el tono de voz de una marca."
+                  instrucciones="Incluye en tu prompt: instrucción clara, output esperado, objetivo, contexto y restricciones."
+                />
+              </div>
+            </li>
+            <li class="mb-10">
+              <h3 class="text-xl font-space font-bold mb-2 text-gray-900">Ideas creativas para lanzamiento de producto</h3>
+              <p class="text-base text-gray-600 mb-4">Redacta un prompt para pedirle a ChatGPT que genere ideas creativas para el lanzamiento de un producto. <span class="font-semibold text-fuchsia-700">Tu prompt debe incluir todos los elementos de la anatomía de un buen prompt:</span> una instrucción clara, el output esperado, el objetivo, el contexto y las restricciones.</p>
+              <div class="bg-gray-50 outline outline-1 outline-gray-200 p-8 mb-2">
+                <EjercicioPrompt client:load 
+                  ejercicio="Redacta un prompt para pedirle a ChatGPT que genere ideas creativas para el lanzamiento de un producto."
+                  instrucciones="Incluye en tu prompt: instrucción clara, output esperado, objetivo, contexto y restricciones."
+                />
+              </div>
+            </li>
+            <li class="mb-10">
+              <h3 class="text-xl font-space font-bold mb-2 text-gray-900">Explicación de los límites de la IA</h3>
+              <p class="text-base text-gray-600 mb-4">Redacta un prompt para pedirle a ChatGPT que explique los límites de la inteligencia artificial en la generación de contenido. <span class="font-semibold text-fuchsia-700">Tu prompt debe incluir todos los elementos de la anatomía de un buen prompt:</span> una instrucción clara, el output esperado, el objetivo, el contexto y las restricciones.</p>
+              <div class="bg-gray-50 outline outline-1 outline-gray-200 p-8 mb-2">
+                <EjercicioPrompt client:load 
+                  ejercicio="Redacta un prompt para pedirle a ChatGPT que explique los límites de la inteligencia artificial en la generación de contenido."
+                  instrucciones="Incluye en tu prompt: instrucción clara, output esperado, objetivo, contexto y restricciones."
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
