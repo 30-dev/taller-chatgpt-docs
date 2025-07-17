@@ -7,6 +7,12 @@ export default function EjercicioPrompt({ ejercicio, instrucciones }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    if (input.trim().length < 20) {
+      setFeedback("Tu prompt es demasiado corto. Por favor, elabora una respuesta más detallada siguiendo las instrucciones.");
+      return;
+    }
+
     setLoading(true);
     setFeedback("");
     try {
