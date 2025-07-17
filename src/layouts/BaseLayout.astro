@@ -1,5 +1,4 @@
 ---
-import ModoPresentacion from "../componentes/ModoPresentacion.jsx";
 import "../styles/global.css";
 import { useState } from "react";
 ---
@@ -29,9 +28,6 @@ import { useState } from "react";
     <!-- Content -->
     <main class="flex-1 p-6 md:p-12 prose max-w-none relative">
       <slot />
-      <ModoPresentacion client:load>
-        <slot />
-      </ModoPresentacion>
     </main>
   </body>
 </html>
