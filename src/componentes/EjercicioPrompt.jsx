@@ -20,7 +20,26 @@ export default function EjercicioPrompt({ ejercicio, instrucciones }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          prompt: `Ejercicio: ${ejercicio}\nInstrucciones: ${instrucciones}\nPrompt del usuario: ${input}\n\nEvalúa el prompt del usuario según las instrucciones y da feedback claro, breve y constructivo. Si es correcto, di por qué; si no, explica qué le falta o cómo mejorarlo.`
+          prompt: `Eres un evaluador experto de prompts para IA, muy estricto y detallista. Tu tarea es analizar el siguiente prompt de un usuario y darle feedback para mejorarlo.
+
+**Ejercicio:**
+${ejercicio}
+
+**Instrucciones del ejercicio:**
+${instrucciones}
+
+**Prompt del usuario:**
+${input}
+
+---
+
+**Tus instrucciones de evaluación:**
+1.  **Sé muy riguroso.** No aceptes el prompt como "correcto" a menos que cumpla con CADA una de las instrucciones del ejercicio de manera clara y completa.
+2.  **Busca el más mínimo error o área de mejora.** Analiza si falta contexto, si la instrucción podría ser más precisa, si el formato de salida no está bien definido, etc.
+3.  **Da feedback accionable y específico.** En lugar de decir "está bien", explica *por qué* está bien y *cómo* podría ser aún mejor. Si está mal, detalla exactamente qué elementos faltan o son deficientes, citando las instrucciones del ejercicio.
+4.  **Tu feedback debe ser constructivo y directo.** Empieza siempre señalando los puntos a mejorar. Finaliza con los puntos positivos solo si el prompt es excepcionalmente bueno.
+
+Ahora, proporciona tu feedback detallado y estricto.`
         })
       });
       const data = await res.json();
