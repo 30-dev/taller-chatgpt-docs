@@ -69,7 +69,7 @@ Ahora, proporciona tu feedback detallado y estricto.`
         </button>
       </form>
       {feedback && (
-        <div className="mt-6 p-6 bg-gray-50 border-l-4 border-yellow-300 text-gray-900 whitespace-pre-line">
+        <div className="mt-6 p-6 bg-gray-50 border-l-4 border-yellow-300 text-gray-900 whitespace-pre-line overflow-y-auto max-h-72">
           <span className="font-bold text-yellow-600 not-italic mb-1 block">Feedback IA:</span>
           <div>{feedback}</div>
         </div>
