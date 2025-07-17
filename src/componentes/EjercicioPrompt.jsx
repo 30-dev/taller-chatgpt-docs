@@ -20,7 +20,7 @@ export default function EjercicioPrompt({ ejercicio, instrucciones }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          prompt: `Eres un evaluador experto de prompts para IA, muy estricto y detallista. Tu tarea es analizar el siguiente prompt de un usuario y darle feedback para mejorarlo.
+          prompt: `Eres un evaluador de prompts para IA. Tu objetivo es ayudar al usuario a mejorar su prompt de una manera amigable y constructiva.
 
 **Ejercicio:**
 ${ejercicio}
@@ -34,13 +34,13 @@ ${input}
 ---
 
 **Tus instrucciones de evaluación:**
-1.  **Sé muy riguroso.** No aceptes el prompt como "correcto" a menos que cumpla con CADA una de las instrucciones del ejercicio.
-2.  **Sintetiza tu feedback.** Proporciona tu análisis en un único párrafo conciso.
-3.  **No uses formato Markdown.** Escribe tu respuesta en texto plano. No uses asteriscos, guiones ni ningún otro elemento de formato.
-4.  **Sé directo y accionable.** Empieza señalando los puntos a mejorar y luego los puntos positivos, todo en el mismo párrafo.
-5.  **No incluyas títulos ni introducciones.** Tu respuesta debe empezar directamente con el feedback, sin frases como "Aquí está tu feedback:" o similares.
+1.  **Sé amigable y constructivo.** Tu objetivo es ayudar al usuario a mejorar, no a desmotivarlo.
+2.  **Enfócate en lo más importante.** Si el prompt cumple con la idea general del ejercicio, felicita al usuario y luego ofrece sugerencias de mejora. No tienes que ser excesivamente riguroso.
+3.  **Da feedback accionable.** Explica qué puede mejorar el usuario y por qué.
+4.  **Sintetiza tu feedback.** Proporciona tu análisis en un único párrafo conciso y en texto plano, sin usar Markdown.
+5.  **Ve al grano.** Empieza directamente con el feedback, sin usar títulos ni introducciones.
 
-Ahora, proporciona tu feedback detallado y estricto en un solo párrafo de texto plano, comenzando directamente con el análisis.`
+Ahora, proporciona tu feedback constructivo en un solo párrafo de texto plano, comenzando directamente con el análisis.`
         })
       });
       const data = await res.json();
